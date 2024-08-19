@@ -6,7 +6,7 @@
 }
 
 .bodySecundario {
-    border: 1px solid rgba(0, 0, 0, 0.438);
+    border: 2px solid rgba(18, 120, 253, 0.329);
     background-color: rgba(240, 248, 255, 0.685);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     /* width: 70vw;
