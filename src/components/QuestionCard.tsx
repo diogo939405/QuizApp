@@ -17,7 +17,7 @@ const QuestionCard: React.FC<Props> = ({ questions, answers, callback, userAnswe
         <div className="bodyCard">
             <Container>
                 <Row>
-                    <p className="questaoAtual">  Question: {questionsNumber + 1} / {totalQuestions}</p>
+                    <p className="questaoAtual">  Question: {questionsNumber} / {totalQuestions - 1}</p>
                     <p dangerouslySetInnerHTML={{ __html: questions }} className="perguntas"></p>
                     <div className="bodySecundario">
                         {answers.map((answer: any) => (
