@@ -60,3 +60,13 @@
     border-color: #4285f4;
     outline: none;
 }
+
+.resposta:active {
+    transform: scale(0.95);
+}
+
+.resposta.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}

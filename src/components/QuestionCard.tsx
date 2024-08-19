@@ -30,9 +30,4 @@ const QuestionCard: React.FC<Props> = ({ questions, answers, callback, userAnswe
         </div >
     );
 }
-{/* <Button  disabled={userAnswer ? true : false} value={answer} onClick={callback} className="alternativa"variant="contained"></Button> */ }
-
-{/* <button disabled={userAnswer ? true : false} value={answer} onClick={callback} className="alternativa"> */ }
-
-
 export default QuestionCard

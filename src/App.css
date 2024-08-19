@@ -96,6 +96,13 @@
   color: white;
 }
 
+.resultadoFinal{
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
 .next {
   margin-top: 2vh;
   background-color: #fff;

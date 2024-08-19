@@ -27,6 +27,7 @@ const App = () => {
 
 
 
+
   const startQuiz = async () => {
 
     setLoading(true)
@@ -49,7 +50,35 @@ const App = () => {
 
   }
 
+  const finalScore = () => {
+    if (number !== Total_Questoes - 1) {
+      return (
+        <p></p>
+      )
+    } else {
+      return (
+        <>
+          <p className='resultadoFinal'> sua pontuação foi {score}</p>
+          <button onClick={resta} className='start'>recomeçar</button>
+          <br />
+        </>
+      )
+    }
+  }
+
+  const resta = () => {
+    window.location.reload()
+  }
+
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+
+    const button = e.currentTarget;
+    const allButtons = document.querySelectorAll('.resposta');
+    allButtons.forEach(btn => btn.classList.remove('selected'));
+
+    button.classList.add('selected');
+
+
     if (!gameOver) {
       const answer = e.currentTarget.value
 
@@ -75,7 +104,7 @@ const App = () => {
     } else {
       setNumber(nextQuestions)
     }
-    
+
   }
 
   return (
@@ -88,10 +117,10 @@ const App = () => {
           ) : null
         }
         {!gameOver ? <p className='score'>Pontuação: {score}</p> : null}
-        {!gameOver ? <p className='questãoAtual'>{number}/{Total_Questoes}</p> : null}
+        {!gameOver && number !== Total_Questoes ? <p className='questãoAtual'>{number + 1}/{Total_Questoes}</p> : null}
         {loading && <p>carregando perguntas</p>}
 
-        {!loading && !gameOver && (
+        {!loading && !gameOver && number !== Total_Questoes - 1 ? (
           <QuestionCard
             totalQuestions={Total_Questoes}
             questionsNumber={number + 1}
@@ -100,14 +129,19 @@ const App = () => {
             userAnswer={userAnswer ? userAnswer[number] : undefined}
             callback={checkAnswer}
           />
-        )}
+        ) : finalScore()}
         {!gameOver && !loading && userAnswer.length === number + 1 && number !== Total_Questoes - 1 ? (
           <button className='next' onClick={nextQuestions}>Proxima pergunta</button>
         ) : null}
+
+
+
 
       </div>
     </>
   );
 }
+
+
 
 export default App
