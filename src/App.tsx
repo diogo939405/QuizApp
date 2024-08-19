@@ -88,7 +88,7 @@ const App = () => {
           ) : null
         }
         {!gameOver ? <p className='score'>Pontuação: {score}</p> : null}
-        {!gameOver ? <p>{number}/{Total_Questoes}</p> : null}
+        {!gameOver ? <p className='questãoAtual'>{number}/{Total_Questoes}</p> : null}
         {loading && <p>carregando perguntas</p>}
 
         {!loading && !gameOver && (

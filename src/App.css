@@ -88,8 +88,14 @@
 }
 
 
+.questãoAtual{
+  font-size: 2rem;
+  font-style: italic;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
 
-/* CSS */
 .next {
   margin-top: 2vh;
   background-color: #fff;
