@@ -57,7 +57,7 @@ const App = () => {
       return (
         <>
           <p className='resultadoFinal'> sua pontuação foi {score}</p>
-          <button onClick={resta} className='start'>recomeçar</button>
+          <button onClick={resta} className='start'>Faça novamente</button>
           <br />
         </>
       )
