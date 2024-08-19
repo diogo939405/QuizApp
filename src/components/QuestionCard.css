@@ -51,6 +51,14 @@
     color: white;
 }
 
+.questaoAtual {
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
 .resposta:hover {
     background-color: #4199f1f5;
 

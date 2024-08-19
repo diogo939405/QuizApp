@@ -17,16 +17,18 @@ const QuestionCard: React.FC<Props> = ({ questions, answers, callback, userAnswe
         <div className="bodyCard">
             <Container>
                 <Row>
-                <p dangerouslySetInnerHTML={{ __html: questions }} className="perguntas"></p>
-                <div className="bodySecundario">
-                    {answers.map((answer: any) => (
-                        <div key={answer} className="divResposta">
-                            <button disabled={userAnswer ? true : false} value={answer} onClick={callback} className="resposta" role="button">
-                                <span dangerouslySetInnerHTML={{ __html: answer }} className="respostaa"></span>
-                            </button>
-                        </div>
-                    ))}
-                </div>
+                    <p className="questaoAtual">  Question: {questionsNumber} / {totalQuestions}</p>
+                    <p dangerouslySetInnerHTML={{ __html: questions }} className="perguntas"></p>
+                    <div className="bodySecundario">
+                        {answers.map((answer: any) => (
+                            <div key={answer} className="divResposta">
+                                <button disabled={userAnswer ? true : false} value={answer} onClick={callback} className="resposta" role="button">
+                                    <span dangerouslySetInnerHTML={{ __html: answer }} className="respostaa"></span>
+                                </button>
+
+                            </div>
+                        ))}
+                    </div>
                 </Row>
             </Container>
         </div >
