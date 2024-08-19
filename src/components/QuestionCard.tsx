@@ -2,6 +2,7 @@ import React from "react";
 import { AnswerObject } from "../App";
 import './QuestionCard.css'
 import Button from '@mui/material/Button';
+import { Container, Row } from "react-bootstrap";
 
 type Props = {
     answers: string[],
@@ -15,18 +16,20 @@ type Props = {
 const QuestionCard: React.FC<Props> = ({ questions, answers, callback, userAnswer, questionsNumber, totalQuestions }) => {
     return (
         <div className="bodyCard">
-
-            <p dangerouslySetInnerHTML={{ __html: questions }} className="perguntas"></p>
-            <div className="bodySecundario">
-                {answers.map((answer: any) => (
-                    <div key={answer} className="divResposta">
-                        <button disabled={userAnswer ? true : false} value={answer} onClick={callback} className="resposta" role="button">
-                            <span dangerouslySetInnerHTML={{ __html: answer }} className="respostaa"></span>
-                        </button>
-                    </div>
-                ))}
-            </div>
-
+            <Container>
+                <Row>
+                <p dangerouslySetInnerHTML={{ __html: questions }} className="perguntas"></p>
+                <div className="bodySecundario">
+                    {answers.map((answer: any) => (
+                        <div key={answer} className="divResposta">
+                            <button disabled={userAnswer ? true : false} value={answer} onClick={callback} className="resposta" role="button">
+                                <span dangerouslySetInnerHTML={{ __html: answer }} className="respostaa"></span>
+                            </button>
+                        </div>
+                    ))}
+                </div>
+                </Row>
+            </Container>
         </div >
     );
 }
