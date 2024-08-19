@@ -26,6 +26,11 @@
   font-weight: 700;
   letter-spacing: 3px;
 }
+.aviso{
+  font-size: 1.3rem;
+  color: white;
+  font-style: italic;
+}
 
 .start {
   border: rgba(255, 255, 255, 0.801) solid;
