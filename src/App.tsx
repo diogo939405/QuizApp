@@ -115,7 +115,7 @@ const App = () => {
           ) : null
         }
         {!gameOver ? <p className='score'>Pontuação: {score}</p> : null}
-        {loading && <p>carregando perguntas</p>}
+        {loading && <p>carregando perguntas(Uso API Free, então caso demore a carregar recarregue a página)</p>}
 
         {!loading && !gameOver && number !== Total_Questoes - 1 ? (
           <QuestionCard
