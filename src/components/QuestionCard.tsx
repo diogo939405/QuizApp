@@ -1,7 +1,6 @@
 import React from "react";
 import { AnswerObject } from "../App";
 import './QuestionCard.css'
-import Button from '@mui/material/Button';
 import { Container, Row } from "react-bootstrap";
 
 type Props = {
